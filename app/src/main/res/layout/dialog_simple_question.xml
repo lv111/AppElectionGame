@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_20dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/bold_red_textview_style_size_20sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewText"
+        style="@style/regular_grey_textview_style_size_15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <Button
+        android:id="@+id/buttonPositiveAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewText"
+        style="@style/bold_red_button_style"
+        android:layout_marginTop="@dimen/space_10dp"
+        android:paddingStart="@dimen/space_15dp"
+        android:paddingEnd="@dimen/space_15dp"/>
+
+    <Button
+        android:id="@+id/buttonNegativeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPositiveAnswer"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPositiveAnswer"
+        app:layout_constraintTop_toTopOf="@+id/buttonPositiveAnswer"
+        style="@style/basic_grey_button_style"
+        android:layout_marginEnd="@dimen/space_20dp"
+        android:paddingStart="@dimen/space_15dp"
+        android:paddingEnd="@dimen/space_15dp"/>
+
+</android.support.constraint.ConstraintLayout>

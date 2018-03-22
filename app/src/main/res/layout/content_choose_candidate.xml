@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space_30dp"
+        android:paddingTop="@dimen/space_15dp"
+        android:paddingStart="@dimen/space_30dp"
+        android:paddingEnd="@dimen/space_30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/regular_grey_textview_style_size_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/choose_candidate"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_0dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/imageViewNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_border_and_fill"
+                android:padding="@dimen/space_15dp"
+                android:src="@drawable/arrow_to_right_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewCandidateName"
+                style="@style/bold_blue_textview_style_size_20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewBirthRegion"
+                style="@style/regular_grey_textview_style_size_15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCandidateName" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBirthRegion"
+                android:layout_marginTop="@dimen/space_2dp">
+
+                <TextView
+                    android:id="@+id/textViewCharisma"
+                    style="@style/regular_white_textview_style_size_15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_red_light"
+                    android:text="@string/charisma"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textViewReputation"
+                    style="@style/regular_white_textview_style_size_15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_grey_dark"
+                    android:text="@string/reputation"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textViewMoney"
+                    style="@style/regular_white_textview_style_size_15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_blue_light"
+                    android:text="@string/money"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textViewPointsLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listviewCandidates"
+        android:layout_width="@dimen/listview_width"
+        android:layout_height="@dimen/listview_height"
+        android:background="@drawable/listview_style"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonAddCandidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_20dp"
+        android:backgroundTint="@color/color_blue_light"
+        app:borderWidth="@dimen/space_0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/listviewCandidates"
+        app:layout_constraintEnd_toEndOf="@+id/listviewCandidates"
+        app:layout_constraintTop_toBottomOf="@+id/listviewCandidates"
+        app:srcCompat="@drawable/plus_white" />
+
+</android.support.constraint.ConstraintLayout>

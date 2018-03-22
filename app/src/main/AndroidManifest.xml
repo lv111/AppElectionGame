@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.game.election.electiongame">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:theme="@style/app_theme"
+        android:supportsRtl="true">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainMenuActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".ChooseStateActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".ChooseCandidateActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".CreateUpdateOwnCandidateActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".SummaryBeforeGameActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".GameActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".GameEvaluationActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".HowToPlayActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+        <activity
+            android:name=".GameStatisticsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/grey_app" />
+
+        <provider
+            android:name=".provider.ElectionContentProvider"
+            android:authorities="com.game.election.electiongame.provider"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <service
+            android:name=".service.ClickMusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".broadcastReceiver.FinishActivityReceiver"
+            android:enabled="true"
+            android:exported="true"/>
+
+
+
+
+    </application>
+
+</manifest>

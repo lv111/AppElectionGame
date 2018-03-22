@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/space_5dp"
+    android:paddingStart="@dimen/space_10dp"
+    android:paddingEnd="@dimen/space_10dp"
+    android:paddingBottom="@dimen/space_10dp">
+
+    <TextView
+        android:id="@+id/textViewWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/regular_grey_textview_style_size_15sp"/>
+
+    <ImageView
+        android:id="@+id/imageViewLine"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="@dimen/space_1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeek"
+        app:srcCompat="@color/color_grey_dark" />
+
+    <TextView
+        android:id="@+id/textViewFirstNameAndSurname"
+        style="@style/regular_blue_textview_style_size_15sp"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginEnd="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLine" />
+
+    <TextView
+        android:id="@+id/textViewFirstLastAction"
+        style="@style/regular_grey_textview_style_size_12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginEnd="@dimen/space_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstNameAndSurname" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFirstPreferencies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstLastAction">
+
+        <ImageView
+            android:id="@+id/imageViewFirstProCandidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/blue_border_and_fill"
+            app:srcCompat="@drawable/like"
+            android:padding="@dimen/space_3dp"
+            android:paddingStart="@dimen/space_5dp"
+            android:paddingEnd="@dimen/space_5dp" />
+
+        <TextView
+            android:id="@+id/textViewFirstProCandidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/regular_blue_textview_style_size_12sp"
+            android:layout_marginStart="@dimen/space_2dp"/>
+
+        <ImageView
+            android:id="@+id/imageViewFirstProOpponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/space_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/red_border_and_fill"
+            app:srcCompat="@drawable/dislike"
+            android:padding="@dimen/space_3dp"
+            android:paddingStart="@dimen/space_5dp"
+            android:paddingEnd="@dimen/space_5dp" />
+
+        <TextView
+            android:id="@+id/textViewFirstProOpponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/regular_red_textview_style_size_12sp"
+            android:layout_marginStart="@dimen/space_2dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewLine2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/space_50dp"
+        android:layout_marginEnd="@dimen/space_50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFirstPreferencies"
+        app:srcCompat="@color/color_grey_dark"
+        android:layout_marginTop="@dimen/space_5dp" />
+
+    <TextView
+        android:id="@+id/textViewSecondNameAndSurname"
+        style="@style/regular_red_textview_style_size_15sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginEnd="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_5dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLine2" />
+
+    <TextView
+        android:id="@+id/textViewSecondLastAction"
+        style="@style/regular_grey_textview_style_size_12sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginEnd="@dimen/space_20dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSecondNameAndSurname" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSecondPreferencies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_2dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSecondLastAction">
+
+        <ImageView
+            android:id="@+id/imageViewSecondProCandidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/blue_border_and_fill"
+            app:srcCompat="@drawable/like"
+            android:padding="@dimen/space_3dp"
+            android:paddingStart="@dimen/space_5dp"
+            android:paddingEnd="@dimen/space_5dp" />
+
+        <TextView
+            android:id="@+id/textViewSecondProCandidate"
+            style="@style/regular_blue_textview_style_size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_2dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imageViewSecondProOpponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/space_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/red_border_and_fill"
+            app:srcCompat="@drawable/dislike"
+            android:padding="@dimen/space_3dp"
+            android:paddingStart="@dimen/space_5dp"
+            android:paddingEnd="@dimen/space_5dp" />
+
+        <TextView
+            android:id="@+id/textViewSecondProOpponent"
+            style="@style/regular_red_textview_style_size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_2dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

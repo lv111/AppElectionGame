@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minWidth="@dimen/space_420dp"
+    android:id="@+id/constraintLayout">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/regular_blue_textview_style_size_20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:text="@string/election_time"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/regular_red_textview_style_size_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5dp"
+        android:text="@string/election_time_text"
+        app:layout_constraintLeft_toLeftOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNumberOfElectionWeek"
+        app:layout_constraintRight_toLeftOf="@+id/textViewNumberOfElectionWeek"
+        app:layout_constraintTop_toTopOf="@+id/textViewNumberOfElectionWeek"
+        app:srcCompat="@drawable/remove_red" />
+
+    <TextView
+        android:id="@+id/textViewNumberOfElectionWeek"
+        style="@style/regular_red_textview_style_size_20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="@dimen/space_50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonAdd"
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonAdd"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonAdd" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_20dp"
+        android:background="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:srcCompat="@drawable/add_red" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="@dimen/space_1dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:background="@color/color_grey_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/regular_blue_textview_style_size_20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:text="@string/first_step"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/textViewFirstStep"
+        style="@style/regular_red_textview_style_size_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+
+    <Switch
+        android:id="@+id/switchFirstStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textColorLink="@color/color_accent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFirstStep"
+        app:layout_constraintLeft_toLeftOf="@+id/imageButtonRemove"
+        app:layout_constraintRight_toRightOf="@+id/imageButtonAdd"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="@dimen/space_1dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:background="@color/color_grey_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstStep" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/regular_blue_textview_style_size_20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:text="@string/recommendation"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/textViewRecommendation"
+        style="@style/regular_red_textview_style_size_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Switch
+        android:id="@+id/switchRecommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintLeft_toLeftOf="@+id/switchFirstStep"
+        app:layout_constraintRight_toRightOf="@+id/switchFirstStep"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+</android.support.constraint.ConstraintLayout>

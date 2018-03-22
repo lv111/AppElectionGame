@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="@dimen/space_420dp"
+    android:scrollbars="vertical">
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNameSurname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNameSurname"
+        app:srcCompat="@drawable/arrow_to_left_grey"
+        android:padding="@dimen/space_15dp" />
+
+    <ImageView
+        android:id="@+id/imageViewCreateUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNameSurname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNameSurname"
+        app:srcCompat="@drawable/check_white"
+        android:background="@drawable/blue_border_and_fill"
+        android:padding="@dimen/space_15dp"/>
+
+    <EditText
+        android:id="@+id/editTextNameSurname"
+        style="@style/regular_red_textview_style_size_20sp"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_20dp"
+        android:layout_marginStart="@dimen/space_20dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        android:ems="10"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCreateUpdate"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBack"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/name_and_surname"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/regular_grey_textview_style_size_15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_30dp"
+        android:text="@string/birth_country"
+        app:layout_constraintStart_toStartOf="@+id/editTextNameSurname"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameSurname" />
+
+    <TextView
+        android:id="@+id/textViewBirthState"
+        style="@style/bold_red_textview_style_size_20sp"
+        android:textAllCaps="true"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/birth_country"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNameSurname"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/regular_grey_textview_style_size_15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_40dp"
+        android:text="@string/birth_region"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBirthState"
+        app:layout_constraintTop_toTopOf="@+id/textView3">
+
+        <TextView
+            android:id="@+id/textViewBirthRegion"
+            style="@style/bold_red_textview_style_size_20sp"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/birth_country"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/imageViewUpRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textViewBirthRegion"
+            app:srcCompat="@drawable/add_red"
+            android:layout_marginStart="@dimen/space_5dp"/>
+
+        <ImageView
+            android:id="@+id/imageViewDownRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewUpRegion"
+            android:layout_marginTop="@dimen/space_5dp"
+            android:layout_toEndOf="@+id/textViewBirthRegion"
+            app:srcCompat="@drawable/remove_red"
+            android:layout_marginStart="@dimen/space_5dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:id="@+id/linearLayout"
+        android:layout_width="@dimen/space_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_10dp"
+        android:layout_marginStart="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/regular_grey_textview_style_size_15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/charisma"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textViewCharisma"
+                style="@style/bold_red_textview_style_size_20sp"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:layout_toEndOf="@id/textView4"
+                android:layout_marginStart="@dimen/space_10dp"
+                android:minWidth="@dimen/space_30dp"/>
+
+            <ImageView
+                android:id="@+id/imageViewUpCharisma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textViewCharisma"
+                app:srcCompat="@drawable/add_red"
+                android:layout_marginStart="@dimen/space_5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewDownCharisma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewUpCharisma"
+                android:layout_marginTop="@dimen/space_5dp"
+                android:layout_toEndOf="@+id/textViewCharisma"
+                app:srcCompat="@drawable/remove_red"
+                android:layout_marginStart="@dimen/space_5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/regular_grey_textview_style_size_15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/reputation"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textViewReputation"
+                style="@style/bold_red_textview_style_size_20sp"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:layout_toEndOf="@id/textView5"
+                android:layout_marginStart="@dimen/space_10dp"
+                android:minWidth="@dimen/space_30dp"/>
+
+            <ImageView
+                android:id="@+id/imageViewUpReputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textViewReputation"
+                app:srcCompat="@drawable/add_red"
+                android:layout_marginStart="@dimen/space_5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewDownReputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewUpReputation"
+                android:layout_marginTop="@dimen/space_5dp"
+                android:layout_toEndOf="@+id/textViewReputation"
+                app:srcCompat="@drawable/remove_red"
+                android:layout_marginStart="@dimen/space_5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="@dimen/space_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/regular_grey_textview_style_size_15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/money"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textViewMoney"
+                style="@style/bold_red_textview_style_size_20sp"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:layout_toEndOf="@id/textView6"
+                android:layout_marginStart="@dimen/space_10dp"
+                android:minWidth="@dimen/space_30dp" />
+
+            <ImageView
+                android:id="@+id/imageViewUpMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textViewMoney"
+                app:srcCompat="@drawable/add_red"
+                android:layout_marginStart="@dimen/space_5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewDownMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewUpMoney"
+                android:layout_marginTop="@dimen/space_5dp"
+                android:layout_toEndOf="@+id/textViewMoney"
+                app:srcCompat="@drawable/remove_red"
+                android:layout_marginStart="@dimen/space_5dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewPoints"
+        style="@style/regular_grey_textview_style_size_15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_20dp"
+        android:layout_marginEnd="@dimen/space_10dp"
+        android:layout_marginStart="@dimen/space_10dp"
+        android:layout_marginTop="@dimen/space_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</android.support.constraint.ConstraintLayout>

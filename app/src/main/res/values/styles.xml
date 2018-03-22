@@ -1,0 +1,187 @@
+<resources>
+    <style name="app_theme" parent="Base.Theme.AppCompat.Light.DarkActionBar" />
+    <style name="app_theme.no_action_bar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/color_blue_light</item>
+        <item name="colorPrimaryDark">@color/color_red_light</item>
+        <item name="colorAccent">@color/color_grey_dark</item>
+        <item name="colorControlActivated">@color/color_blue_light</item>
+        <item name="android:fontFamily">@font/app_font</item>
+    </style>
+    <style name="grey_app" parent="app_theme.no_action_bar">
+        <item name="android:colorBackground">@color/color_grey_light</item>
+    </style>
+    <style name="textview_style" />
+    <style name="white_textview_style" parent="textview_style">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+    <style name="bold_white_textview_style" parent="white_textview_style">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="bold_white_textview_style_size_20sp" parent="bold_white_textview_style">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+    <style name="bold_white_textview_style_size_10sp" parent="bold_white_textview_style">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+    <style name="regular_white_textview_style" parent="white_textview_style">
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="regular_white_textview_style_size_70sp" parent="regular_white_textview_style">
+        <item name="android:textSize">@dimen/text_size_70sp</item>
+    </style>
+    <style name="regular_white_textview_style_size_30sp" parent="regular_white_textview_style">
+        <item name="android:textSize">@dimen/text_size_30sp</item>
+    </style>
+    <style name="regular_white_textview_style_size_15sp" parent="regular_white_textview_style">
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+    </style>
+    <style name="regular_white_textview_style_size_12sp" parent="regular_white_textview_style">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+    <style name="regular_white_textview_style_size_10sp" parent="regular_white_textview_style">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+    <style name="blue_textview_style" parent="textview_style">
+        <item name="android:textColor">@color/color_blue_light</item>
+    </style>
+    <style name="bold_blue_textview_style" parent="blue_textview_style">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="bold_blue_textview_style_size_30sp" parent="bold_blue_textview_style">
+        <item name="android:textSize">@dimen/text_size_30sp</item>
+    </style>
+    <style name="bold_blue_textview_style_size_20sp" parent="bold_blue_textview_style">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+    <style name="bold_blue_textview_style_size_15sp" parent="bold_blue_textview_style">
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+    </style>
+    <style name="regular_blue_textview_style" parent="blue_textview_style">
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="regular_blue_textview_style_size_20sp" parent="regular_blue_textview_style">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+    <style name="regular_blue_textview_style_size_15sp" parent="regular_blue_textview_style">
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+    </style>
+    <style name="regular_blue_textview_style_size_12sp" parent="regular_blue_textview_style">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+    <style name="regular_blue_textview_style_size_10sp" parent="regular_blue_textview_style">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+    <style name="red_textview_style" parent="textview_style">
+        <item name="android:textColor">@color/color_red_light</item>
+    </style>
+    <style name="bold_red_textview_style" parent="red_textview_style">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="bold_red_textview_style_size_30sp" parent="bold_red_textview_style">
+        <item name="android:textSize">@dimen/text_size_30sp</item>
+    </style>
+    <style name="bold_red_textview_style_size_20sp" parent="bold_red_textview_style">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+    <style name="bold_red_textview_style_size_15sp" parent="bold_red_textview_style">
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+    </style>
+    <style name="regular_red_textview_style" parent="red_textview_style">
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="regular_red_textview_style_size_20sp" parent="regular_red_textview_style">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+    <style name="regular_red_textview_style_size_15sp" parent="regular_red_textview_style">
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+    </style>
+    <style name="regular_red_textview_style_size_12sp" parent="regular_red_textview_style">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+    <style name="regular_red_textview_style_size_10sp" parent="regular_red_textview_style">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+    <style name="grey_textview_style" parent="textview_style">
+        <item name="android:textColor">@color/color_grey_dark</item>
+    </style>
+    <style name="regular_grey_textview_style" parent="grey_textview_style">
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="regular_grey_textview_style_size_20sp" parent="regular_grey_textview_style">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+    <style name="regular_grey_textview_style_size_15sp" parent="regular_grey_textview_style">
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+    </style>
+    <style name="regular_grey_textview_style_size_12sp" parent="regular_grey_textview_style">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+    <style name="regular_grey_textview_style_size_10sp" parent="regular_grey_textview_style">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+    <style name="activity_splash_title" parent="regular_white_textview_style_size_70sp">
+        <item name="android:shadowColor">@color/color_black</item>
+        <item name="android:shadowRadius">70</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="activity_uvod_title" parent="regular_white_textview_style_size_30sp">
+        <item name="android:shadowColor">@color/color_black</item>
+        <item name="android:shadowRadius">30</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="statistics_name" parent="bold_white_textview_style_size_10sp">
+        <item name="android:background">@drawable/grey_border_and_fill</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingTop">@dimen/space_5dp</item>
+        <item name="android:paddingBottom">@dimen/space_5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="statistics_candidate_name" parent="bold_blue_textview_style_size_15sp">
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="statistics_value" parent="regular_grey_textview_style_size_12sp">
+    </style>
+    <style name="statistics_block">
+        <item name="android:layout_marginTop">@dimen/space_10dp</item>
+        <item name="android:layout_marginBottom">@dimen/space_10dp</item>
+    </style>
+    <style name="how_to_play_title" parent="bold_blue_textview_style_size_20sp">
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="how_to_play_text" parent="regular_grey_textview_style_size_15sp"/>
+    <style name="button_style">
+        <item name="android:paddingStart">@dimen/space_10dp</item>
+        <item name="android:paddingEnd">@dimen/space_10dp</item>
+    </style>
+    <style name="bold_button_style" parent="button_style">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="bold_grey_button_style" parent="bold_button_style">
+        <item name="android:background">@drawable/basic_grey_button_style</item>
+    </style>
+    <style name="bold_red_button_style" parent="bold_button_style">
+        <item name="android:background">@drawable/basic_red_button_style</item>
+    </style>
+    <style name="bold_blue_button_style" parent="bold_button_style">
+        <item name="android:background">@drawable/basic_blue_button_style</item>
+    </style>
+    <style name="basic_button_style" parent="button_style">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="basic_grey_button_style" parent="basic_button_style">
+        <item name="android:textColor">@color/color_grey_dark</item>
+    </style>
+</resources>

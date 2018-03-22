@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">VOUTY</string>
+    <string name="tap_to_continue">Klikni pre pokračovanie</string>
+    <string name="saved_game">Uložená hra</string>
+    <string name="how_to_play">Ako hrať?</string>
+    <string name="settings">Nastavenia</string>
+    <string name="choose_state">Vyber si štát</string>
+    <string name="choose_candidate">Vyber si kandidáta</string>
+    <string name="population">Populácia: %s</string>
+    <string name="num_of_regions">Počet regiónov: %s</string>
+    <string name="birth_region_of_candidate">Rodný región: %s</string>
+    <string name="charisma">Charizma</string>
+    <string name="reputation">Reputácia</string>
+    <string name="money">Peniaze</string>
+    <string name="update">Upraviť</string>
+    <string name="delete">Vymazať</string>
+    <string name="update_candidate">Úprava kandidáta</string>
+    <string name="delete_candidate">Zmazanie kandidáta</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="versus">vs.</string>
+    <string name="investment">Investícia</string>
+    <string name="interview">Interview</string>
+    <string name="statistics_most_used_game_action">Najčastejší typ akcie</string>
+    <string name="statistics_most_used_problem">Najčastejšie vyberaný problém</string>
+    <string name="statistics_most_used_region">Najčastejšie vyberaný región</string>
+    <string name="statistics_most_voted_region">Región s najvyššou volebnou účasťou</string>
+    <string name="statistics_least_voted_region">Región s najnižšou volebnou účasťou</string>
+    <string name="statistics_most_effected_problem">Problém s najväčším pôsobením na voličov</string>
+    <string name="statistics_least_effected_problem">Problém s najmenším pôsobením na voličov</string>
+    <string name="statistics_most_used_game_action_detail">
+        Táto štatistika popisuje, či bolo viac poskytované interview alebo sa viac investovalo.</string>
+    <string name="statistics_most_used_problem_detail">
+        Táto štatistika popisuje, ktoré témy na interview alebo oblasti investovania boli najviac preferované.</string>
+    <string name="statistics_most_used_region_detail">
+        Táto štatistika popisuje, v ktorých regiónoch sa najčastejsie poskytovali interview alebo sa v nich najviac investovalo.</string>
+    <string name="statistics_most_voted_region_detail">
+        Táto štatistika popisuje, v ktorých regiónoch sa najviac hlasovalo za konkrétneho kandidáta.</string>
+    <string name="statistics_least_voted_region_detail">
+        Táto štatistika popisuje, v ktorých regiónoch sa najmenej hlasovalo za konkrétneho kandidáta.</string>
+    <string name="statistics_most_effected_problem_detail">
+        Táto štatistika popisuje, na ktoré interview alebo investíciu reagovali voliči najviac pre konkrétneho kandidáta.</string>
+    <string name="statistics_least_effected_problem_detail">
+        Táto štatistika popisuje, na ktoré interview alebo investíciu reagovali voliči najmenej pre konkrétneho kandidáta.</string>
+    <string name="win">Vyhral si!</string>
+    <string name="lose">Prehral si!</string>
+    <string name="draw">Remíza!</string>
+    <string name="yes">Áno</string>
+    <string name="no">Nie</string>
+    <string name="delete_saved_game">Vymazanie uloženej hry</string>
+    <string name="helps_show">Nápovedy sa zobrazujú</string>
+    <string name="helps_not_show">Nápovedy sa nezobrazujú</string>
+    <string name="name_and_surname">Meno a priezvisko</string>
+    <string name="birth_country">Rodný štát</string>
+    <string name="birth_region">Rodný región</string>
+    <string name="save_new_candidate">Uložiť nového kandidáta</string>
+    <string name="election_time">Trvanie volieb</string>
+    <string name="election_time_text">Počet volebných týždňov</string>
+    <string name="first_step">Prvý krok</string>
+    <string name="first_step_candidate">Prvý krok urobíš ty.</string>
+    <string name="first_step_opponent">Prvý krok urobí tvoj oponent.</string>
+    <string name="recommendation">Odporúčania</string>
+    <string name="choose_investment_area">Vyber si oblasť investície</string>
+    <string name="choose_interview_theme">Vyber si tému interview</string>
+    <string name="problem_effect">Efekt problému:</string>
+    <string name="problem_solvability">Riešiteľnosť problému:</string>
+    <string name="do_action">Vykonaj</string>
+    <string name="low">nízka</string>
+    <string name="middle">stredná</string>
+    <string name="high">vysoká</string>
+    <string name="negative">negatívny</string>
+    <string name="neutral">neutrálny</string>
+    <string name="positive">pozitívny</string>
+    <string name="game_statistics">Herné štatistiky</string>
+    <string name="play_again">Hrať znovu</string>
+    <string name="play_now">Hrať teraz</string>
+    <string name="save">Uložiť</string>
+    <string name="history">História</string>
+    <string name="end">Koniec</string>
+    <string name="new_">Nová</string>
+    <string name="game">Hra</string>
+    <string name="save_game">Uloženie hry</string>
+    <string name="end_game">Ukončenie hry</string>
+    <string name="save_new_game_or_update_saved_game">Táto hra už bola uložená. Chceš ju uložiť znovu alebo aktualizovať uloženú hru?</string>
+    <string name="game_saved">Hra uložená</string>
+    <string name="ending">Ukončiť</string>
+    <string name="any_saved_game">Nie sú žiadne uložené hry.</string>
+    <string name="any_history">Žiadna história pre zobrazenie.</string>
+    <string name="saved_at_date">Uložené %s</string>
+    <string name="you_have_to_fill_in_name_and_surname">Musíš vyplniť meno a priezvisko.</string>
+    <string name="sure_you_want_save_new_candidate">Si si istý, že chceš uložiť nového kandidáta?</string>
+    <string name="sure_you_want_save_candidate">Si si istý, že chceš uložiť kandidáta?</string>
+    <string name="sure_you_want_delete_candidate">Si si istý, že chceš zmazať kandidáta?</string>
+    <string name="sure_you_want_end_game_without_saving">Si si istý, že chceš ukončiť hru bez uloženia?</string>
+    <string name="sure_you_want_end_game">Si si istý, že chceš ukončiť hru?</string>
+    <string name="sure_you_want_play_this_saved_game">Si si istý, že chceš hrať túto uloženú hru?</string>
+    <string name="sure_you_want_delete_this_saved_game">Si si istý, že chceš vymazať túto uloženú hru?</string>
+    <plurals name="points_left">
+        <item quantity="one">%d bod zostáva</item>
+        <item quantity="few">%d body zostávajú</item>
+        <item quantity="other">%d bodov zostáva</item>
+    </plurals>
+    <string name="num_week">%d. týždeň</string>
+    <string name="what_is_goal_of_game">Čo je cieľom hry?</string>
+    <string name="what_is_goal_of_game_answer">Cieľom hry je vyhrať voľby na základe krokov, ktoré vykonáš vo volebnej kampani.</string>
+    <string name="what_is_in_game">Ako hra prebieha?</string>
+    <string name="what_is_in_game_answer">Najprv si musíš zvoliť štát, v ktorom sa voľby budú odohrávať. Následne ti bude ponúknutý zoznam kandidátov, za ktorých môžeš hrať vo zvolenom štáte. Každý kandidát má iné vlastnosti, vďaka ktorým môžeš ovplyvňovať voličov. Kandidáta si môžeš aj vytvoriť a takýchto svojich kandidátov môžeš aj upravovať alebo mazať, ako budeš chcieť.
+       \nPo výbere štátu a kandidáta nasleduje samotná volebná kampaň, to znamená, že si vyberáš kraje štátu, kde chceš investovať alebo poskytovať rozhovory. Každý týždeň volebnej kampani môžeš spraviť jeden krok, ale takýto krok spraví aj tvoj oponent. Skús si vyberať hlavne svoj kraj, kde sa tvoj kandidát narodil, pretože ti môže priniesť väčší úspech. Ovplyvniť môžeš aj susedné kraje. Po skončení volebnej kampani nasleduje vyhodnotenie, kde zistíš, či si vyhral alebo nie.</string>
+    <string name="what_about_features_of_candidate">Aké sú vlastnosti kandidáta?</string>
+    <string name="what_about_features_of_candidate_answer">Každý kandidát má 3 dôležité vlastnosti - charizma, reputácia a peniaze. Charizma je vlastnosť, vďaka ktorej budeš úspešnejší pri poskytovaní interview. Reputácia ti pomôže získať viac voličov, najmä v rodnom kraji tvojho kandidáta. Peniaze ti môžu pomôcť, ale aj uškodiť, ak ich má tvoj kandidát príliš veľa, má nižšiu charizmu a reputáciu a nemôže ovplyvňovať svojich voličov vo vysokej miere. Takisto voličom sa nepáči, ak máš príliš veľa peňazí.</string>
+    <string name="what_about_investment_and_interview">Aké oblasti investície a témy rozhovorov mám vyberať?</string>
+    <string name="what_about_investment_and_interview_answer">Také, ktoré ti prinesú najväčší úspech. Ak nevieš odhadnúť, aká oblasť investície alebo téma rozhovoru ti prinesie úspech, nastav si zobrazovanie odporúčaní v nastaveniach hry, ktoré nájdeš v hlavnom menu. V nastaveniach nájdeš aj dĺžku volebnej kampani a môžeš zmeniť aj to, kto bude robiť prvý krok v hre.</string>
+
+
+</resources>
