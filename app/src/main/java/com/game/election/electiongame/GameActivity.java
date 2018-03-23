@@ -47,8 +47,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
-//TODO: ked mi otvori dialog a oznacim temu alebo oblast investicie, tak rozlisit ci tam modre alebo cervene kruzko a to iste plati pre nazov, aka farba bude
-
 
     /*
     *
@@ -1091,9 +1089,6 @@ public class GameActivity extends AppCompatActivity {
             //jeden kraj v state
             RelativeLayout layout = (RelativeLayout) relativeLayoutMapObjects.getChildAt(i); //jeden kraj
             if (!layout.getTag().toString().equals("regionDetail")) {
-                //TODO: pravdepodobne nasledujuce 2 riadky nepotrebujem, ale skontrolovat to
-                for (int j = layout.getChildCount() - 1; j >= 2; j--)
-                    layout.removeViewAt(j);
                 //nastavenie viditelnosti textviewu so skratkou kraju
                 layout.getChildAt(0).setVisibility(View.VISIBLE);
                 //nastavenie viditelnosti imageviewu oznacujuceho rodny kraj kandidata alebo oponenta
@@ -1469,11 +1464,18 @@ public class GameActivity extends AppCompatActivity {
         radioGroupListOfProblems = dialog.findViewById(R.id.radioGroupListOfProblems);
         radioGroupListOfProblems.setOnClickListener(playMusicOnClickListener);
         for (int i = 0; i < problemNames.size(); ++i) {
+            //nastavenie farby pre radioButton - pri oznaceni sa zmeni farba kruhu a farba textu
+            final String color;
+            if (actualOnStep.getIntValue() == 1)
+                color = "blue";
+            else
+                color = "red";
+
             //vytvorenie jednej polozky zoznamu s problemami
             MyRadioButton radioButton = new MyRadioButton(getApplicationContext());
             radioGroupListOfProblems.addView(radioButton);
             radioButton.setText(problemNames.get(i));
-            radioButton.setChecked(false);
+            radioButton.setChecked(false,color);
             radioButton.setTag(i);
             //nastavenie onClickListenera, ktory meni lavu cast dialogu
             radioButton.setOnClickListener(new View.OnClickListener() {
@@ -1486,7 +1488,7 @@ public class GameActivity extends AppCompatActivity {
 
                         if (radioButton1.getChecked()) {
                             //odznacenie radioButtonu, v lavej casti dialogu sa objavi text pre popis, co ma pouzivatel urobit
-                            radioButton1.setChecked(false);
+                            radioButton1.setChecked(false,color);
                             (dialog.findViewById(R.id.textViewChooseProblemOfActionType)).setVisibility(View.VISIBLE);
                             (dialog.findViewById(R.id.constraintLayoutDetailProblem)).setVisibility(View.INVISIBLE);
                             switch (actionType) {
@@ -1501,13 +1503,13 @@ public class GameActivity extends AppCompatActivity {
                             }
                         } else {
                             //oznacenie radioButtonu, v lavej casti dialogu sa objavi detail vybraneho problemu
-                            radioButton1.setChecked(true);
+                            radioButton1.setChecked(true,color);
                             final int position = Integer.parseInt(radioButton1.getTag().toString());
                             for (int j = 0; j < position; j++) {
-                                ((MyRadioButton) radioGroupListOfProblems.getChildAt(j)).setChecked(false);
+                                ((MyRadioButton) radioGroupListOfProblems.getChildAt(j)).setChecked(false,color);
                             }
                             for (int j = position + 1; j < radioGroupListOfProblems.getChildCount(); j++) {
-                                ((MyRadioButton) radioGroupListOfProblems.getChildAt(j)).setChecked(false);
+                                ((MyRadioButton) radioGroupListOfProblems.getChildAt(j)).setChecked(false,color);
                             }
                             (dialog.findViewById(R.id.textViewChooseProblemOfActionType)).setVisibility(View.INVISIBLE);
                             (dialog.findViewById(R.id.constraintLayoutDetailProblem)).setVisibility(View.VISIBLE);
@@ -2292,7 +2294,7 @@ public class GameActivity extends AppCompatActivity {
                 region.setActionType(actionType);
                 if (actualOnStep.getIntValue() == 1) {
                     //krok vykonal kandidat
-                    obj = doActionOnRegion(true,actionType,beforeProCharacter,beforeUndecided,
+                    obj = doActionOnRegion(actionType,beforeProCharacter,
                             beforeProOpponent,regionPopulation,birthRegionOfCharacter,
                             candidate.getCharisma(),candidate.getReputation(),candidate.getMoney(),
                             birthRegionOfOpponent,opponent.getCharisma(),opponent.getReputation(),
@@ -2310,7 +2312,7 @@ public class GameActivity extends AppCompatActivity {
                     region.setLastAction(lastAction);
                 } else {
                     //krok vykonal opponent
-                    obj = doActionOnRegion(true,actionType,beforeProOpponent,beforeUndecided,
+                    obj = doActionOnRegion(actionType,beforeProOpponent,
                             beforeProCharacter,regionPopulation,birthRegionOfOpponent,
                             opponent.getCharisma(),opponent.getReputation(),opponent.getMoney(),
                             birthRegionOfCharacter,candidate.getCharisma(),candidate.getReputation(),
@@ -2344,7 +2346,7 @@ public class GameActivity extends AppCompatActivity {
                     region.setActionType(actionType);
                     if (actualOnStep.getIntValue() == 1) {
                         //krok vykonal kandidat
-                        obj = doActionOnRegion(false,actionType,beforeProCharacter,beforeUndecided,
+                        obj = doActionOnRegion(actionType,beforeProCharacter,
                                 beforeProOpponent,regionPopulation,birthRegionOfCharacter,
                                 candidate.getCharisma(),candidate.getReputation(),candidate.getMoney(),
                                 birthRegionOfOpponent,opponent.getCharisma(),opponent.getReputation(),
@@ -2354,7 +2356,7 @@ public class GameActivity extends AppCompatActivity {
                         afterProOpponent = obj.getDouble("pro");
                     } else if (actualOnStep.getIntValue() == 0) {
                         //krok vykonal oponent
-                        obj = doActionOnRegion(false,actionType,beforeProOpponent,beforeUndecided,
+                        obj = doActionOnRegion(actionType,beforeProOpponent,
                                 beforeProCharacter,regionPopulation,birthRegionOfOpponent,
                                 opponent.getCharisma(),opponent.getReputation(),opponent.getMoney(),
                                 birthRegionOfCharacter,candidate.getCharisma(),candidate.getReputation(),
@@ -2378,9 +2380,7 @@ public class GameActivity extends AppCompatActivity {
     * funkcia pre vykonanie akcie v regione
     *
     * */
-    private Bundle doActionOnRegion(boolean regionOfAction, String actionType,
-                                    double beforeProFirst, double beforeUndecided, double beforeProSecond,
-                                    long population,
+    private Bundle doActionOnRegion(String actionType, double beforeProFirst, double beforeProSecond, long population,
                                     boolean birthRegionOfFirstCandidate, double charismaFirst, double reputationFirst, double moneyFirst,
                                     boolean birthRegionOfSecondCandidate, double charismaSecond, double reputationSecond, double moneySecond,
                                     double problemEffect, double problemSolvability) {
@@ -2408,8 +2408,9 @@ public class GameActivity extends AppCompatActivity {
                 editMoneyFirst = moneyFirst / 10;
                 denominatorFirst = moneyFirst;
                 editCharismaSecond = charismaSecond;
-                editMoneyFirst = moneySecond / 10;
+                editMoneySecond = moneySecond / 10;
                 denominatorSecond = moneyFirst;
+                break;
             }
             case "investment" : {
                 editCharismaFirst = charismaFirst / 10;
@@ -2418,6 +2419,7 @@ public class GameActivity extends AppCompatActivity {
                 editCharismaSecond = charismaSecond / 10;
                 editMoneySecond = moneySecond;
                 denominatorSecond = charismaSecond;
+                break;
             }
             default: {
             }
@@ -2430,68 +2432,60 @@ public class GameActivity extends AppCompatActivity {
         if (birthRegionOfSecondCandidate)
             birthRegionSecond = (charismaSecond + reputationSecond) / moneySecond;
 
-        double proFirst =
+        double proFirstInPercent =
                 (editCharismaFirst + reputationFirst + editMoneyFirst) / denominatorFirst
                 + birthRegionFirst
                 + problemEffect
                 + problemSolvabilityFirst
                 + new Random(2).nextDouble() - 1;
-        double proSecond =
+        double proSecondInPercent =
                 (editCharismaSecond + reputationSecond + editMoneySecond) / denominatorSecond
                 + birthRegionSecond
                 + problemEffect
                 + problemSolvabilitySecond
                 + new Random(2).nextDouble() - 1;
 
-        double pom = proFirst - proSecond / 10;
-        proSecond = proSecond - proFirst / 10;
-        proFirst = pom;
+        double pom = (proFirstInPercent - proSecondInPercent / 10) / 100;
+        proSecondInPercent = (proSecondInPercent - proFirstInPercent / 10) / 100;
+        proFirstInPercent = pom;
 
-        double afterProFirst = beforeProFirst + population * proFirst;
-        double afterProSecond = beforeProSecond + population * proSecond;
+        double afterProFirst = beforeProFirst + population * proFirstInPercent;
+        double afterProSecond = beforeProSecond + population * proSecondInPercent;
         double afterUndecided = population - afterProFirst - afterProSecond;
 
-/*
-        //TODO: co ak afterPro a afterAgainst bude vecsie ako population?? moze nastat taka situacia?
-        //ohranicenie poctu volicov, pocet nemoze byt mensi ako 0
-        if (afterPro >= 0 && afterAgainst >= 0 && afterUndecided >= 0) {
-            Bundle obj = new Bundle();
-            obj.putDouble("pro", afterPro);
-            obj.putDouble("undecided", afterUndecided);
-            obj.putDouble("against", afterAgainst);
-            return obj;
-        } else if (afterPro < 0 && afterAgainst < 0) {
-            afterPro = 0;
-            afterAgainst = 0;
-            afterUndecided = population;
-            Bundle obj = new Bundle();
-            obj.putDouble("pro", afterPro);
-            obj.putDouble("undecided", afterUndecided);
-            obj.putDouble("against", afterAgainst);
-            return obj;
-        } else if (afterPro < 0) {
-            afterAgainst = afterAgainst + -1*afterPro/population;
-            afterPro = 0;
-            afterUndecided = population - afterPro - afterAgainst;
-            Bundle obj = new Bundle();
-            obj.putDouble("pro", afterPro);
-            obj.putDouble("undecided", afterUndecided);
-            obj.putDouble("against", afterAgainst);
-            return obj;
-        }
-        else if (afterAgainst < 0) {
-            afterPro = afterPro + -1*afterAgainst/population;
-            afterAgainst = 0;
-            afterUndecided = population - afterPro - afterAgainst;
-            Bundle obj = new Bundle();
-        }
-        else
-            return null;*/
-
+        //ohranicenie poctu volicov, pocet nemoze byt mensi ako 0 alebo vecsi ako je populacia regionu
         Bundle obj = new Bundle();
-        obj.putDouble("pro", afterProFirst);
-        obj.putDouble("undecided", afterUndecided);
-        obj.putDouble("against", afterProSecond);
+        if (afterProFirst >= 0 && afterProFirst <= population &&
+                afterUndecided >= 0 && afterUndecided <= population &&
+                afterProSecond >= 0 && afterProSecond <= population) {
+            obj.putDouble("pro", afterProFirst);
+            obj.putDouble("undecided", afterUndecided);
+            obj.putDouble("against", afterProSecond);
+        }
+        else if (afterProFirst < 0 && afterProSecond < 0) {
+            afterProFirst = 0;
+            afterProSecond = 0;
+            afterUndecided = population;
+            obj.putDouble("pro", afterProFirst);
+            obj.putDouble("undecided", afterUndecided);
+            obj.putDouble("against", afterProSecond);
+        }
+        else if (afterProFirst < 0) {
+            afterProSecond = afterProSecond + -1*afterProFirst/population;
+            afterProFirst = 0;
+            afterUndecided = population - afterProFirst - afterProSecond;
+            obj.putDouble("pro", afterProFirst);
+            obj.putDouble("undecided", afterUndecided);
+            obj.putDouble("against", afterProSecond);
+        }
+        else if (afterProSecond < 0) {
+            afterProFirst = afterProFirst + -1*afterProSecond/population;
+            afterProSecond = 0;
+            afterUndecided = population - afterProFirst - afterProSecond;
+            obj.putDouble("pro", afterProFirst);
+            obj.putDouble("undecided", afterUndecided);
+            obj.putDouble("against", afterProSecond);
+        }
         return obj;
     }
 

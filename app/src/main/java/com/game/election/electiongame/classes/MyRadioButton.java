@@ -26,7 +26,8 @@ public class MyRadioButton extends LinearLayout {
     boolean checked;                    //identifikuje, ci je RadioButton oznaceny
     final String TYPEFACE_PATH = "fonts/firasans_regular.ttf";                          //typ pisma pre zobrazeny text
     final int TEXT_STYLE_NOT_CHECKED = R.style.regular_grey_textview_style_size_12sp;   //styl pisma, ak RadioButton nie je oznaceny
-    final int TEXT_STYLE_CHECKED = R.style.regular_blue_textview_style_size_15sp;       //styl pisma, ak RadioButton je oznaceny
+    final int TEXT_STYLE_CHECKED_BLUE = R.style.regular_blue_textview_style_size_15sp;  //styl pisma, ak RadioButton je oznaceny
+    final int TEXT_STYLE_CHECKED_RED = R.style.regular_red_textview_style_size_15sp;    //styl pisma, ak RadioButton je oznaceny
 
 
     //konstruktor
@@ -88,12 +89,22 @@ public class MyRadioButton extends LinearLayout {
     * funkcia pre nastavenie oznacenia alebo odznacenia RadioButtona
     *
     * */
-    public void setChecked(boolean checked) {
+    public void setChecked(boolean checked, String color) {
         this.checked = checked;
         if (this.checked) {
             //oznacenie RadioButtona
-            textView.setTextAppearance(getContext(),TEXT_STYLE_CHECKED);
-            imageView.setImageResource(R.drawable.checked_blue);
+            switch (color) {
+                case "red": {
+                    imageView.setImageResource(R.drawable.checked_red);
+                    textView.setTextAppearance(getContext(),TEXT_STYLE_CHECKED_RED);
+                    break;
+                }
+                case "blue": {
+                    imageView.setImageResource(R.drawable.checked_blue);
+                    textView.setTextAppearance(getContext(),TEXT_STYLE_CHECKED_BLUE);
+                    break;
+                }
+            }
         }
         else {
             //odznacenie RadioButtona
@@ -111,5 +122,11 @@ public class MyRadioButton extends LinearLayout {
     * */
     public boolean getChecked() {
         return checked;
+    }
+
+
+
+    public void setColor() {
+
     }
 }
