@@ -1,4 +1,4 @@
-# ElectionGame
+# VOUTY
 The VOUTY is a simulator type of game about the election of a president of Slovak Republic and Czechia. 
 Your goal is to pick a candidate who will get the most votes and win the election.
 
