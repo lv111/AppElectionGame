@@ -109,6 +109,5 @@
     <string name="what_about_features_of_candidate_answer">Každý kandidát má 3 dôležité vlastnosti - charizma, reputácia a peniaze. Charizma je vlastnosť, vďaka ktorej budeš úspešnejší pri poskytovaní interview. Reputácia ti pomôže získať viac voličov, najmä v rodnom kraji tvojho kandidáta. Peniaze ti môžu pomôcť, ale aj uškodiť, ak ich má tvoj kandidát príliš veľa, má nižšiu charizmu a reputáciu a nemôže ovplyvňovať svojich voličov vo vysokej miere. Takisto voličom sa nepáči, ak máš príliš veľa peňazí.</string>
     <string name="what_about_investment_and_interview">Aké oblasti investície a témy rozhovorov mám vyberať?</string>
     <string name="what_about_investment_and_interview_answer">Také, ktoré ti prinesú najväčší úspech. Ak nevieš odhadnúť, aká oblasť investície alebo téma rozhovoru ti prinesie úspech, nastav si zobrazovanie odporúčaní v nastaveniach hry, ktoré nájdeš v hlavnom menu. V nastaveniach nájdeš aj dĺžku volebnej kampani a môžeš zmeniť aj to, kto bude robiť prvý krok v hre.</string>
-
-
+    <string name="application_not_support_language">Sorry, the application don´t support your language.</string>
 </resources>

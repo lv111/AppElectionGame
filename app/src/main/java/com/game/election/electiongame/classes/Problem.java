@@ -7,7 +7,7 @@ public class Problem {
     * trieda, ktora oznacuje oblast investicie alebo temu interview
     *
     * */
-//TODO: tu som skoncila s komentarmi
+
     private int id;             //identifikator problemu
     private double effect,             //hodnota
             solvability;
